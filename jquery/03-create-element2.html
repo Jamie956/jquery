@@ -1,0 +1,12 @@
+<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+
+<div id="root"></div>
+
+<script>
+    var $ul = $('<ul></ul>');
+    for (let i = 0; i < 10; i++) {
+        let $li = $(`<li class="item" >hello world${i}</li>`);
+        $ul.append($li);
+    }
+    $('#root').append($ul);
+</script>

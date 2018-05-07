@@ -1,0 +1,14 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<input type="text" id="input1" value="123" />
+
+<script>
+    $.fn.extend({
+        alertWhileClick: function () {
+            $(this).click(function () {
+                alert($(this).val());
+            });
+        }
+    });
+    $("#input1").alertWhileClick();
+</script>

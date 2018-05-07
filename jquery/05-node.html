@@ -1,0 +1,20 @@
+<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+
+<ul id="order">
+	<li>hello</li>
+	<li></li>
+	<li></li>
+	<li id="item4">world</li>
+	<li></li>
+	<li></li>
+	<li></li>
+</ul>
+
+<script>
+	var $ul = $("#order");
+	//获取子元素
+	var $lis = $ul.children("li");
+	$lis.css('color', 'red');
+	//元素索引
+	$('#item4').index('li');//3
+</script>

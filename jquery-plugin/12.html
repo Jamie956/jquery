@@ -1,0 +1,17 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script>
+    (function ($) {
+        jQuery.extend({
+            "minValue": function (a, b) {
+                return a < b ? a : b;
+            },
+            "maxValue": function (a, b) {
+                return a > b ? a : b;
+            }
+        });
+    })(jQuery)
+
+    console.log($.maxValue(1, 100))
+    console.log($.minValue(1, 100))
+</script>

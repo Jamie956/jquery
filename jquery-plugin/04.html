@@ -1,0 +1,23 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<h3></h3>
+
+<script>
+    (function ($) {
+        $.fn.demo = function (options) {
+            var settings = $.extend({
+                text: 'Hello, World!',
+                color: null,
+                fontStyle: null
+            }, options);
+
+            console.log(settings)
+        }
+    }(jQuery));
+
+    $('h3').demo({
+        text: 'Salut, le monde!',
+        color: '#005dff',
+        fontStyle: 'italic'
+    });
+</script>
