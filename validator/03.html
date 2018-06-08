@@ -12,10 +12,12 @@
         $("#commentForm").validate({
             submitHandler: function (form) {
                 console.log(form)
+                var data = new FormData(form);
+                console.log(data)
                 $.ajax({
                     type: 'POST',
                     url: './api/add',
-                    data: form,
+                    data: data,
                     async: true,
                     cache: false,
                     contentType: false,
