@@ -9,11 +9,30 @@
         }
     });
     $().ready(function () {
-        $("#commentForm").validate();
+        $("#commentForm").validate({
+            submitHandler: function (form) {
+                console.log(form)
+                $.ajax({
+                    type: 'POST',
+                    url: './api/add',
+                    data: form,
+                    async: true,
+                    cache: false,
+                    contentType: false,
+                    processData: false,
+                    success: function (data) {
+                        alert('success')
+                    },
+                    error: function (err) {
+                        alert('failure')
+                    }
+                })
+            }
+        })
     });
 </script>
 
-<form class="cmxform" id="commentForm" method="get" action="">
+<form class="cmxform" id="commentForm">
     <fieldset>
         <legend>输入您的名字，邮箱，URL，备注。</legend>
         <p>
