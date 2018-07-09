@@ -1,2 +1,2 @@
-//获取数组索引
+//获取元素的索引
 $.inArray(element, arrary);
