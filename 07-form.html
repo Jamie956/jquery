@@ -20,7 +20,7 @@
     $('#myform').submit(function (e) {
         var form = $(this)
         $.ajax({
-            contentType: "application/json; charset=utf-8",
+            // contentType: "application/json; charset=utf-8",
             type: form.attr('method'),
             url: form.attr('action'),
             data: form.serialize(),
